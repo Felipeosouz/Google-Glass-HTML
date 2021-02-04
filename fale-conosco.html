@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8"/>
+<head>
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/specs.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <link rel="icon" type="image/x-icon" href="_imagens/logo-google-certo.jpg"/>
+    <script language="JavaScript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calctotal() {
+            var qntd = parseInt(document.getElementById('iqnt').value);
+            tot = qntd * 1500;
+            document.getElementById('itot').value = tot;
+        }
+    </script>
+</head>
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        <img id="photo" src="_imagens/glass-oculos-preto-peq.png">
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul>
+                <li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                <li onmouseover="mudafoto('_imagens/especificacoes.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                <li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                <li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="corpo-specs">
+        <h2>Fale Conosco > Contato</h2>
+        <h1>Formulário de Contato</h1>
+        <h3>por Gustavo Guanabara</h3>
+        <h4>Atualizado em 01/Maio/2013</h4>
+    </section>
+
+    <form method="post" id="icontato" action="Lepe.play1@hotmail.com" oninput="calctotal();">
+        <fieldset id="usuario">
+            <legend>Identificação do Usuário</legend>
+            <p><label for="iname">Nome:</label> <input type="text" name="nname" id="iname" size="20" maxlength="30" placeholder="Nome completo"></p>
+            <p><label for="isenha">Senha:</label> <input type="password" name="nsenha" id="isenha" size="10" maxlength="10" placeholder="10 dígitos"></p>
+            <p><label for="iemail">E-mail:</label> <input type="email" name="nemail" id="iemail" size="20" maxlength="40" placeholder="E-mail"></p>
+            <fieldset id="sexo">
+                <legend>Sexo</legend>
+                <input type="radio" name="nsexo" id="imasc"> <label for="imasc">Masculino</label></br>
+                <input type="radio" name="nsexo" id="ifem"> <label for="ifem">Feminino</label>
+            </fieldset>
+            <p>Data de Nascimento: <input type="date" name="ndata" id="idata"></p>
+        </fieldset>
+        <fieldset id="endereco">
+            <legend>Endereço do Usuário</legend>
+            <p><label for="irua">Logradouro:</label> <input type="text" name="nrua" id="irua" size="15" maxlength="50" placeholder="Nome da rua"></p>
+            <p><label for="inum">Número:</label> <input type="number" name="nnum" id="inum" min="0" max="9999" placeholder="Número"></p>
+            <p><label for="iest">Estado:</label>
+            <select name="nest" id="iest">
+                <optgroup label="Norte">
+                    <option>Acre</option>
+                    <option>Amapá</option>
+                    <option>Amazonas</option>
+                    <option>Pará</option>
+                    <option>Rondônia</option>
+                    <option>Roraima</option>
+                    <option>Tocantins</option>
+                </optgroup>
+                <optgroup label="Nordeste">
+                    <option>Alagoas</option>
+                    <option>Bahia</option>
+                    <option>Ceará</option>
+                    <option>Maranhão</option>
+                    <option>Paraíba</option>
+                    <option>Pernambuco</option>
+                    <option>Rio Grande do Norte</option>
+                    <option>Sergipe</option>
+                </optgroup>
+                <optgroup label="Centro-Oeste">
+                    <option>Goiás</option>
+                    <option>Mato Grosso</option>
+                    <option>Mato Grosso do Sul</option>
+                </optgroup>
+                <optgroup label="Sudeste">
+                    <option>Espiríto Santo</option>
+                    <option>Minas Gerais</option>
+                    <option>Rio de Janeiro</option>
+                    <option>São Paulo</option>
+                </optgroup>
+                <optgroup label="Sul">
+                    <option>Paraná</option>
+                    <option>Rio Grande do Sul</option>
+                    <option>Santa Catarina</option>
+                </optgroup>
+            </select>
+            </p>
+            <p><label for="icity">Cidade:</label> <input type="text" name="ncity" id="icity" size="20" maxlength="20" placeholder="Cidade"></p>
+        </fieldset>
+
+        <fieldset id="mensagem">
+            <legend>Mensagem do Usuário</legend>
+            <p>Grau de Urgência: Mín<input type="range" name="ngrau" id="igrau" min="0" max="10" step="1">Máx</p>
+            <p><label for="imsg">Mensagem: </label><textarea name="nmsg" id="imsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+        </fieldset>
+
+        <fieldset id="glass">
+            <legend>Quero um Google Glass</legend>
+            <p><input type="checkbox" name="nped" id="iped"><label for="iped">Gostaria de adquirir um Google Glass quando
+                disponível</label></p>
+            <p>Cor: <input type="color" name="ncor" id="icor" value="#0000FF"></p>
+            <p><label for="iqnt">Quantidade:</label> <input type="number" name="nqnt" id="iqnt" min="0" max="10" placeholder="0"></p>
+            <p>Preço Total: US$ <input type="text" name="ntot" id="itot" placeholder="Total a pagar" readonly></p>
+        </fieldset>
+        <input type="image" name="nenviar" src="_imagens/botao-enviar.png">
+    </form>
+
+            <footer id="rodape">
+                <p>Copyright &copy; 2013 - by Felipe Oliveira <br/>
+                    <a href="http://www.facebook.com/cursosemvideo" target="_blank">Facebook</a> |
+                    <a href="http://www.twitter.com/cursosemvideo" target="_blank">Twitter</a>
+                </p>
+            </footer>
+</div>
+</body>
+</html>
